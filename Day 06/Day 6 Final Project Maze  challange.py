@@ -7,10 +7,12 @@ def turn_right():
     turn_left()
     turn_left()
 
+###########################
+# solution of bug
 while front_is_clear():
     move()
 turn_left()
-
+################################
 while not at_goal():
     if right_is_clear():
         turn_right()
@@ -21,4 +23,4 @@ while not at_goal():
         turn_left()
 
 
-# Note: This code has some bugs... the robot gets to infinite loop on some position.
+
