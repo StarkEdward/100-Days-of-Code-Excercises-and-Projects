@@ -13,5 +13,4 @@ w = int(input("Width of wall: "))
 coverage = 5
 
 # calling a function
-
 PaintCalc(height=h, width=w, cover=coverage)
