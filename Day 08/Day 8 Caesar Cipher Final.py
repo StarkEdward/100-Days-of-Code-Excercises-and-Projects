@@ -19,7 +19,7 @@ def caesar(start_text, shift_amount, cipher_direction):
     print(f"Here's the {cipher_direction}d result: {end_text}")
 
 while True:
-    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
     try:
         if direction == 'encode' or direction == 'decode':
             text = input("Type your message:\n").lower()
@@ -29,7 +29,7 @@ while True:
 
         caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
 
-        result = input("Type 'yes' if you want to try again. Otherwise type 'no'\n")
+        result = input("Type 'yes' if you want to try again. Otherwise type 'no'\n").lower()
         if result == 'no':
             print("Good bye!")
             break
