@@ -24,3 +24,6 @@ for student in student_scores:
         student_grades[student] = "Fail"
 
 print(student_grades)
+print()
+for i in student_grades:
+    print(f"{i} = {student_grades[i]}")
