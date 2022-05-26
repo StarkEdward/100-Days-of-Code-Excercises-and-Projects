@@ -28,3 +28,5 @@ while True:
     if choice == 'no':
         find_highest_bidder(bid=bidder_record)
         break
+    else:
+        os.system("cls")
