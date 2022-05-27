@@ -34,13 +34,14 @@ operations = {
 
 
 def calculator():
-    num1 = int(input("Enter First number: "))
+    print(logo)
+    num1 = eval(input("Enter First number: "))
     for symbol in operations:
         print(symbol)
     should_continue = True
     while should_continue:
         chosen_operator = input("Choose an operation: ")
-        num2 = int(input("Enter another number: "))
+        num2 = eval(input("Enter another number: "))
 
         calculation_function = operations[chosen_operator]
         answer = calculation_function(num1, num2)
