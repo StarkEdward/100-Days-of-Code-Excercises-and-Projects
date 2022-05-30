@@ -1,4 +1,6 @@
 import random
+import art
+import os
 # from art import logo
 def deal_card():
     """Returns a random card from a deck"""
@@ -32,7 +34,7 @@ def compare(user_score, computer_score):
         return "You lose!"
 
 def play_game():
-    # print(logo)
+    print(art.logo)
     user_cards = []
     computer_cards = []
     is_game_over = False
@@ -64,4 +66,5 @@ def play_game():
     print(compare(user_score,computer_score))
 
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n' : ") == 'y':
+    os.system("cls")
     play_game()
