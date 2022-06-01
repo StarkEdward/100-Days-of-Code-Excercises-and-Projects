@@ -1,5 +1,6 @@
 from random import randint
 import os
+
 # global constant
 EASY_LEVEL_TURNS = 10
 HARD_LEVEL_TURNS = 5
@@ -48,7 +49,7 @@ def game():
         elif guess != answer:
             print("Guess again")
 
+
 while input("Do you want to play the Number Guessing Game! Press 'y' or 'n'.: ") == 'y':
     os.system('cls')
     game()
-
