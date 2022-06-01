@@ -25,6 +25,7 @@ def set_difficulty():
     else:
         return HARD_LEVEL_TURNS
 
+
 def game():
     # Choosing a random number between 1 and 100
     print("Welcome to the Number Guessing Game!")
@@ -47,5 +48,5 @@ def game():
         elif guess != answer:
             print("Guess again")
 
-game()
 
+game()
