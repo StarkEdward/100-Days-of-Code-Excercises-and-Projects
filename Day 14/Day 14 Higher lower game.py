@@ -11,14 +11,17 @@ def format_data(account):
     account_country = account["country"]
     return f"{account_name}, a {account_descr}, from {account_country}"
 
+
 # check is user is correct
-def check_answer(guess, a_follower, b_follwer):
-    """Take the user guess and follwers counts and returns ifthey got it right."""
-    ## Use if statemnt to check if user is correct.
-    if a_follower > b_follwer:
+def check_answer(guess, a_follower, b_follower):
+    """Take the user guess and followers counts and returns if they got it right."""
+    # Use if statement to check if user is correct.
+    if a_follower > b_follower:
         return guess == 'a'
     else:
         return guess == 'b'
+
+
 # Display art
 print(logo)
 score = 0
@@ -41,11 +44,10 @@ while game_should_continue:
     # Ask user for a guess
     guess = input("Who has more followers? Type 'A' or 'B': ").lower()
 
-
-    ## Get follwer count of each account.
+    # Get follower count of each account.
     a_follower = account_a["follower_count"]
-    b_follwer = account_b["follower_count"]
-    is_correct = check_answer(guess, a_follower, b_follwer)
+    b_follower = account_b["follower_count"]
+    is_correct = check_answer(guess, a_follower, b_follower)
 
     # Clear the screen between rounds.
     os.system("cls")
@@ -59,9 +61,3 @@ while game_should_continue:
     else:
         game_should_continue = False
         print(f"Sorry,that's wrong! Final Score: {score}")
-
-
-
-
-
-
