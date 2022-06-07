@@ -9,10 +9,12 @@ class QuizBrain:
         self.question_list = q_list
 
     def still_has_questions(self):
-        if self.question_number < len(self.question_list):
-            return True
-        else:
-            False
+        return self.question_number < len(self.question_list)
+        # oor use below method
+        # if self.question_number < len(self.question_list):
+        #     return True
+        # else:
+        #     False
 
 
     def next_question(self):
