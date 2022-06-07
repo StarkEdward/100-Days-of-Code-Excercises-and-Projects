@@ -13,8 +13,5 @@ for _ in range(50):
 
 
 
-
-
-
 screen = Screen()
 screen.exitonclick()
