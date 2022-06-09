@@ -19,6 +19,7 @@ def counter_clockwise():
 def clockwise():
     tim.left(10)
 
+
 def clear_drawing():
     tim.clear()
 
