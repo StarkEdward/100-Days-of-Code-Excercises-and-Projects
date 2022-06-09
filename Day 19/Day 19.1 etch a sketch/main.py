@@ -13,11 +13,11 @@ def move_backwards():
 
 
 def counter_clockwise():
-    tim.right(10)
+    tim.left(10)
 
 
 def clockwise():
-    tim.left(10)
+    tim.right(10)
 
 
 def clear_drawing():
