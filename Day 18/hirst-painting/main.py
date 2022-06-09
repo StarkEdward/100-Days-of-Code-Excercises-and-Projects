@@ -14,6 +14,9 @@ import random
 # print(rgb_colors)
 d = t.Turtle()
 t.colormode(255)
+d.speed("fastest")
+d.penup()
+d.hideturtle()
 color_list = [(202, 164, 110), (236, 239, 243), (149, 75, 50), (222, 201, 136), (53, 93, 123), (170, 154, 41),
               (138, 31, 20), (134, 163, 184), (197, 92, 73), (47, 121, 86), (73, 43, 35), (145, 178, 149), (14, 98, 70),
               (232, 176, 165), (160, 142, 158), (54, 45, 50), (101, 75, 77), (183, 205, 171), (36, 60, 74),
@@ -21,12 +24,18 @@ color_list = [(202, 164, 110), (236, 239, 243), (149, 75, 50), (222, 201, 136), 
               (176, 192, 208), (168, 99, 102)]
 
 d.setheading(225)
-d.forward(250)
+d.forward(300)
 d.setheading(0)
-for _ in range(10):
-    d.dot(20, random.choice(color_list))
+number_of_dots = 100
+for dot_count in range(1, number_of_dots + 1):
+    d.dot(15, random.choice(color_list))
     d.forward(50)
-
+    if dot_count% 10 == 0:
+        d.setheading(90)
+        d.forward(50)
+        d.setheading(180)
+        d.forward(500)
+        d.setheading(0)
 
 screen = t.Screen()
 screen.exitonclick()
