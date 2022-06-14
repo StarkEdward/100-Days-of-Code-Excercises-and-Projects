@@ -1,0 +1,1 @@
+Hello This a example to create a new file and write automatically in it.
