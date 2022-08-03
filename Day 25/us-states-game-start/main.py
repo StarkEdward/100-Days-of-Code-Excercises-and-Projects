@@ -10,16 +10,25 @@ turtle.shape(image)
 data = pandas.read_csv("50_states.csv")
 all_state = data.state.to_list()
 guessed_state = []
+
 # get the co-ordinate
 # def get_mouse_click_coor(x, y):
 #     print(x, y)
 # turtle.onscreenclick(get_mouse_click_coor)
 # turtle.mainloop()
+
 while len(guessed_state) < 50:
     answer_state = screen.textinput(title=f"{len(guessed_state)}/50 Guess the State",
                                     prompt="What's another state's name?").title()
     # if answer_state is one of the state in all the states of the 50_states.csv.
-    if answer_state == "Exit":
+    if answer_state == "Exit":  # exit the game when type exit
+        missing_states = []
+        for state in all_state:
+            if state not in missing_states:
+                missing_states.append(state)
+        # print(missing_states)
+        new_data = pandas.DataFrame(missing_states)
+        new_data.to_csv("states_to_learn.csv")
         break
     if answer_state in all_state:
         guessed_state.append(answer_state)
@@ -32,5 +41,4 @@ while len(guessed_state) < 50:
         # t.write(state_data.state.item())
         t.write(answer_state)
 
-# states to learn.csv
 
