@@ -24,7 +24,7 @@ while len(guessed_state) < 50:
     if answer_state == "Exit":  # exit the game when type exit
         missing_states = []
         for state in all_state:
-            if state not in missing_states:
+            if state not in guessed_state:
                 missing_states.append(state)
         # print(missing_states)
         new_data = pandas.DataFrame(missing_states)
