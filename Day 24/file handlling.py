@@ -7,15 +7,15 @@
 # file.close()  # use to close file
 
 # 2nd method
-# with open("my_file.txt") as file:       #
-#     contents = file.read()
-#     print(contents)
+with open("my_file.txt") as file:       #
+    contents = file.read()
+    print(contents)
 
 # # Writing a file
 # with open("my_file.txt", mode="a") as file:
 #     file.write("\nnew Text here.")
 
-with open("test.txt", mode="w") as file:            # only works with write mode.
-    file.write("Hello This a example to create a new file and write automatically in it.")
+# with open("test.txt", mode="w") as file:            # only works with write mode.
+#     file.write("Hello This a example to create a new file and write automatically in it.")
 
 
